@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{22191455-4C75-4930-AD2E-85394334968C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RagEngine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\rag-engine\libs\all\eigen;..\..\rag-engine\libs\win\lua\include;..\..\rag-engine\libs\win\claw\include;C:\Users\ChunYiu\dev\rag-engine\libs\all\boost_1_56_0;..\..\rag-engine\libs\win\SDL2\include;..\..\rag-engine\libs\win\SDL2_gfx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\ChunYiu\dev\rag-engine\libs\win\claw\lib;C:\Users\ChunYiu\dev\rag-engine\libs\win\SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\RagEngineProject\RagEngine;..\..\rag-engine\libs\win\SDL2_image\include;..\..\rag-engine\libs\win\claw\include;..\..\rag-engine\libs\all\eigen;..\..\rag-engine\libs\win\lua\include;..\..\rag-engine\libs\all\boost_1_56_0;..\..\rag-engine\libs\win\SDL2\include;..\..\rag-engine\libs\win\SDL2_gfx\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\rag-engine\libs\win\SDL2_image\lib\x64;C:\Users\ChunYiu\dev\rag-engine\libs\win\lua\lib;C:\Users\ChunYiu\dev\rag-engine\libs\win\SDL2_gfx\lib;C:\Users\ChunYiu\dev\rag-engine\libs\win\claw\lib\x64;C:\Users\ChunYiu\dev\rag-engine\libs\win\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_gfx.lib;SDL2_image.lib;lua52.lib;claw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\rag-engine\src\Component_Base.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Component_Dragging.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\DebugConsole.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Demo.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\DisplayObject.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\DisplayObjectBase.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\DisplayObjectContainer.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\DragEvent.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Entity.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Entity_Bot.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Entity_Emitter.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Entity_Floor.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Event.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\EventDispatcher.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\EventListener.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\FontMgr.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\GameGlobal.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\GradientRect.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Graphics.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\GUI_Base.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\GUI_BaseContainer.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\GUI_Button.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\GUI_Image.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\GUI_Label.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\GUI_ScrollVBox.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\GUI_VBox.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\GUI_VScrollBar.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\GUI_Window.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Kernel.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\KeyboardEvent.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Logger.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\MouseEvent.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Object.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Page.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Page_Default.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Page_Gameplay.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Page_GfxTest.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Page_LuaTest.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Page_TestCO.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Page_TestDisplayObject.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Page_TestFont.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Page_TestLinearAlgebra.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Page_TestUI.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Profiler.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\ScrollBarEvent.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Stage.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Texture.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\TextureMgr.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Timer.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Transform.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\TransformEvent.cpp" />
+    <ClCompile Include="..\..\rag-engine\src\Tweener.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\rag-engine\src\Component_Base.h" />
+    <ClInclude Include="..\..\rag-engine\src\Component_Dragging.h" />
+    <ClInclude Include="..\..\rag-engine\src\DebugConsole.h" />
+    <ClInclude Include="..\..\rag-engine\src\DisplayObject.h" />
+    <ClInclude Include="..\..\rag-engine\src\DisplayObjectBase.h" />
+    <ClInclude Include="..\..\rag-engine\src\DisplayObjectContainer.h" />
+    <ClInclude Include="..\..\rag-engine\src\DragEvent.h" />
+    <ClInclude Include="..\..\rag-engine\src\Entity.h" />
+    <ClInclude Include="..\..\rag-engine\src\Entity_Bot.h" />
+    <ClInclude Include="..\..\rag-engine\src\Entity_Emitter.h" />
+    <ClInclude Include="..\..\rag-engine\src\Entity_Floor.h" />
+    <ClInclude Include="..\..\rag-engine\src\Event.h" />
+    <ClInclude Include="..\..\rag-engine\src\EventDispatcher.h" />
+    <ClInclude Include="..\..\rag-engine\src\EventListener.h" />
+    <ClInclude Include="..\..\rag-engine\src\FontMgr.h" />
+    <ClInclude Include="..\..\rag-engine\src\GameGlobal.h" />
+    <ClInclude Include="..\..\rag-engine\src\GradientRect.h" />
+    <ClInclude Include="..\..\rag-engine\src\Graphics.h" />
+    <ClInclude Include="..\..\rag-engine\src\GUI_Base.h" />
+    <ClInclude Include="..\..\rag-engine\src\GUI_BaseContainer.h" />
+    <ClInclude Include="..\..\rag-engine\src\GUI_Button.h" />
+    <ClInclude Include="..\..\rag-engine\src\GUI_Image.h" />
+    <ClInclude Include="..\..\rag-engine\src\GUI_Label.h" />
+    <ClInclude Include="..\..\rag-engine\src\GUI_ScrollVBox.h" />
+    <ClInclude Include="..\..\rag-engine\src\GUI_VBox.h" />
+    <ClInclude Include="..\..\rag-engine\src\GUI_VScrollBar.h" />
+    <ClInclude Include="..\..\rag-engine\src\GUI_Window.h" />
+    <ClInclude Include="..\..\rag-engine\src\Helper.h" />
+    <ClInclude Include="..\..\rag-engine\src\Kernel.h" />
+    <ClInclude Include="..\..\rag-engine\src\KeyboardEvent.h" />
+    <ClInclude Include="..\..\rag-engine\src\Logger.h" />
+    <ClInclude Include="..\..\rag-engine\src\MouseEvent.h" />
+    <ClInclude Include="..\..\rag-engine\src\Object.h" />
+    <ClInclude Include="..\..\rag-engine\src\Page.h" />
+    <ClInclude Include="..\..\rag-engine\src\Page_Default.h" />
+    <ClInclude Include="..\..\rag-engine\src\Page_Gameplay.h" />
+    <ClInclude Include="..\..\rag-engine\src\Page_GfxTest.h" />
+    <ClInclude Include="..\..\rag-engine\src\Page_LuaTest.h" />
+    <ClInclude Include="..\..\rag-engine\src\Page_TestCO.h" />
+    <ClInclude Include="..\..\rag-engine\src\Page_TestDisplayObject.h" />
+    <ClInclude Include="..\..\rag-engine\src\Page_TestFont.h" />
+    <ClInclude Include="..\..\rag-engine\src\Page_TestLinearAlgebra.h" />
+    <ClInclude Include="..\..\rag-engine\src\Page_TestUI.h" />
+    <ClInclude Include="..\..\rag-engine\src\Primitive.h" />
+    <ClInclude Include="..\..\rag-engine\src\Profiler.h" />
+    <ClInclude Include="..\..\rag-engine\src\ScrollBarEvent.h" />
+    <ClInclude Include="..\..\rag-engine\src\Settings.h" />
+    <ClInclude Include="..\..\rag-engine\src\Stage.h" />
+    <ClInclude Include="..\..\rag-engine\src\testpixel.h" />
+    <ClInclude Include="..\..\rag-engine\src\Texture.h" />
+    <ClInclude Include="..\..\rag-engine\src\TextureMgr.h" />
+    <ClInclude Include="..\..\rag-engine\src\Timer.h" />
+    <ClInclude Include="..\..\rag-engine\src\Transform.h" />
+    <ClInclude Include="..\..\rag-engine\src\TransformEvent.h" />
+    <ClInclude Include="..\..\rag-engine\src\Tweener.h" />
+    <ClInclude Include="..\..\rag-engine\src\Types.h" />
+    <ClInclude Include="clawInclude\claw\algorithm.hpp" />
+    <ClInclude Include="clawInclude\claw\application.hpp" />
+    <ClInclude Include="clawInclude\claw\arguments.hpp" />
+    <ClInclude Include="clawInclude\claw\arguments_table.hpp" />
+    <ClInclude Include="clawInclude\claw\assert.hpp" />
+    <ClInclude Include="clawInclude\claw\automaton.hpp" />
+    <ClInclude Include="clawInclude\claw\avl.hpp" />
+    <ClInclude Include="clawInclude\claw\avl_base.hpp" />
+    <ClInclude Include="clawInclude\claw\basic_singleton.hpp" />
+    <ClInclude Include="clawInclude\claw\basic_socket.hpp" />
+    <ClInclude Include="clawInclude\claw\basic_socketbuf.hpp" />
+    <ClInclude Include="clawInclude\claw\binary_node.hpp" />
+    <ClInclude Include="clawInclude\claw\bitmap.hpp" />
+    <ClInclude Include="clawInclude\claw\bit_istream.hpp" />
+    <ClInclude Include="clawInclude\claw\bit_ostream.hpp" />
+    <ClInclude Include="clawInclude\claw\box_2d.hpp" />
+    <ClInclude Include="clawInclude\claw\buffered_istream.hpp" />
+    <ClInclude Include="clawInclude\claw\buffered_ostream.hpp" />
+    <ClInclude Include="clawInclude\claw\claw.hpp" />
+    <ClInclude Include="clawInclude\claw\claw_gettext.hpp" />
+    <ClInclude Include="clawInclude\claw\color_palette.hpp" />
+    <ClInclude Include="clawInclude\claw\configuration_file.hpp" />
+    <ClInclude Include="clawInclude\claw\coordinate_2d.hpp" />
+    <ClInclude Include="clawInclude\claw\coordinate_traits.hpp" />
+    <ClInclude Include="clawInclude\claw\curve.hpp" />
+    <ClInclude Include="clawInclude\claw\dynamic_library.hpp" />
+    <ClInclude Include="clawInclude\claw\dynamic_library_traits.hpp" />
+    <ClInclude Include="clawInclude\claw\dynamic_library_traits_unix.hpp" />
+    <ClInclude Include="clawInclude\claw\dynamic_library_traits_win32.hpp" />
+    <ClInclude Include="clawInclude\claw\exception.hpp" />
+    <ClInclude Include="clawInclude\claw\factory.hpp" />
+    <ClInclude Include="clawInclude\claw\functional.hpp" />
+    <ClInclude Include="clawInclude\claw\game_ai.hpp" />
+    <ClInclude Include="clawInclude\claw\gif.hpp" />
+    <ClInclude Include="clawInclude\claw\glob.hpp" />
+    <ClInclude Include="clawInclude\claw\graph.hpp" />
+    <ClInclude Include="clawInclude\claw\graph_algorithm.hpp" />
+    <ClInclude Include="clawInclude\claw\image.hpp" />
+    <ClInclude Include="clawInclude\claw\isocket_stream.hpp" />
+    <ClInclude Include="clawInclude\claw\iterator.hpp" />
+    <ClInclude Include="clawInclude\claw\it_index.hpp" />
+    <ClInclude Include="clawInclude\claw\jpeg.hpp" />
+    <ClInclude Include="clawInclude\claw\jpeg_error_manager.hpp" />
+    <ClInclude Include="clawInclude\claw\kmp.hpp" />
+    <ClInclude Include="clawInclude\claw\line_2d.hpp" />
+    <ClInclude Include="clawInclude\claw\logger.hpp" />
+    <ClInclude Include="clawInclude\claw\log_level.hpp" />
+    <ClInclude Include="clawInclude\claw\log_stream.hpp" />
+    <ClInclude Include="clawInclude\claw\log_stream_concise.hpp" />
+    <ClInclude Include="clawInclude\claw\log_stream_uniq.hpp" />
+    <ClInclude Include="clawInclude\claw\lzw_decoder.hpp" />
+    <ClInclude Include="clawInclude\claw\lzw_encoder.hpp" />
+    <ClInclude Include="clawInclude\claw\math.hpp" />
+    <ClInclude Include="clawInclude\claw\max_vector.hpp" />
+    <ClInclude Include="clawInclude\claw\meta.hpp" />
+    <ClInclude Include="clawInclude\claw\meta\conditional.hpp" />
+    <ClInclude Include="clawInclude\claw\meta\is_base_of.hpp" />
+    <ClInclude Include="clawInclude\claw\meta\no_type.hpp" />
+    <ClInclude Include="clawInclude\claw\meta\same_type.hpp" />
+    <ClInclude Include="clawInclude\claw\meta\type_list.hpp" />
+    <ClInclude Include="clawInclude\claw\multi_type_map.hpp" />
+    <ClInclude Include="clawInclude\claw\multi_type_map_visitor.hpp" />
+    <ClInclude Include="clawInclude\claw\non_copyable.hpp" />
+    <ClInclude Include="clawInclude\claw\ordered_set.hpp" />
+    <ClInclude Include="clawInclude\claw\osocket_stream.hpp" />
+    <ClInclude Include="clawInclude\claw\pcx.hpp" />
+    <ClInclude Include="clawInclude\claw\pixel.hpp" />
+    <ClInclude Include="clawInclude\claw\png.hpp" />
+    <ClInclude Include="clawInclude\claw\real_number.hpp" />
+    <ClInclude Include="clawInclude\claw\rectangle.hpp" />
+    <ClInclude Include="clawInclude\claw\rle_decoder.hpp" />
+    <ClInclude Include="clawInclude\claw\rle_encoder.hpp" />
+    <ClInclude Include="clawInclude\claw\smart_ptr.hpp" />
+    <ClInclude Include="clawInclude\claw\socket_server.hpp" />
+    <ClInclude Include="clawInclude\claw\socket_stream.hpp" />
+    <ClInclude Include="clawInclude\claw\socket_traits.hpp" />
+    <ClInclude Include="clawInclude\claw\socket_traits_unix.hpp" />
+    <ClInclude Include="clawInclude\claw\socket_traits_win32.hpp" />
+    <ClInclude Include="clawInclude\claw\string_algorithm.hpp" />
+    <ClInclude Include="clawInclude\claw\system_info.hpp" />
+    <ClInclude Include="clawInclude\claw\system_info_unix.hpp" />
+    <ClInclude Include="clawInclude\claw\system_info_win32.hpp" />
+    <ClInclude Include="clawInclude\claw\targa.hpp" />
+    <ClInclude Include="clawInclude\claw\tree.hpp" />
+    <ClInclude Include="clawInclude\claw\trie.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\base_tweener.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\easing\easing_back.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\easing\easing_bounce.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\easing\easing_circ.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\easing\easing_cubic.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\easing\easing_elastic.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\easing\easing_expo.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\easing\easing_linear.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\easing\easing_none.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\easing\easing_quad.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\easing\easing_quart.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\easing\easing_quint.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\easing\easing_sine.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\easing\symmetric_easing.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\single_tweener.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\tweener.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\tweener_group.hpp" />
+    <ClInclude Include="clawInclude\claw\tween\tweener_sequence.hpp" />
+    <ClInclude Include="clawInclude\claw\types.hpp" />
+    <ClInclude Include="clawInclude\claw\vector_2d.hpp" />
+    <ClInclude Include="clawInclude\claw\version.hpp" />
+    <ClInclude Include="clawInclude\claw\xbm.hpp" />
+    <ClInclude Include="clawSource\claw\algorithm.hpp" />
+    <ClInclude Include="clawSource\claw\application.hpp" />
+    <ClInclude Include="clawSource\claw\arguments.hpp" />
+    <ClInclude Include="clawSource\claw\arguments_table.hpp" />
+    <ClInclude Include="clawSource\claw\assert.hpp" />
+    <ClInclude Include="clawSource\claw\automaton.hpp" />
+    <ClInclude Include="clawSource\claw\avl.hpp" />
+    <ClInclude Include="clawSource\claw\avl_base.hpp" />
+    <ClInclude Include="clawSource\claw\basic_singleton.hpp" />
+    <ClInclude Include="clawSource\claw\basic_socket.hpp" />
+    <ClInclude Include="clawSource\claw\basic_socketbuf.hpp" />
+    <ClInclude Include="clawSource\claw\binary_node.hpp" />
+    <ClInclude Include="clawSource\claw\bitmap.hpp" />
+    <ClInclude Include="clawSource\claw\bit_istream.hpp" />
+    <ClInclude Include="clawSource\claw\bit_ostream.hpp" />
+    <ClInclude Include="clawSource\claw\box_2d.hpp" />
+    <ClInclude Include="clawSource\claw\buffered_istream.hpp" />
+    <ClInclude Include="clawSource\claw\buffered_ostream.hpp" />
+    <ClInclude Include="clawSource\claw\claw.hpp" />
+    <ClInclude Include="clawSource\claw\claw_gettext.hpp" />
+    <ClInclude Include="clawSource\claw\color_palette.hpp" />
+    <ClInclude Include="clawSource\claw\configuration_file.hpp" />
+    <ClInclude Include="clawSource\claw\coordinate_2d.hpp" />
+    <ClInclude Include="clawSource\claw\coordinate_traits.hpp" />
+    <ClInclude Include="clawSource\claw\curve.hpp" />
+    <ClInclude Include="clawSource\claw\dynamic_library.hpp" />
+    <ClInclude Include="clawSource\claw\dynamic_library_traits.hpp" />
+    <ClInclude Include="clawSource\claw\dynamic_library_traits_unix.hpp" />
+    <ClInclude Include="clawSource\claw\dynamic_library_traits_win32.hpp" />
+    <ClInclude Include="clawSource\claw\exception.hpp" />
+    <ClInclude Include="clawSource\claw\factory.hpp" />
+    <ClInclude Include="clawSource\claw\functional.hpp" />
+    <ClInclude Include="clawSource\claw\game_ai.hpp" />
+    <ClInclude Include="clawSource\claw\gif.hpp" />
+    <ClInclude Include="clawSource\claw\glob.hpp" />
+    <ClInclude Include="clawSource\claw\graph.hpp" />
+    <ClInclude Include="clawSource\claw\graph_algorithm.hpp" />
+    <ClInclude Include="clawSource\claw\image.hpp" />
+    <ClInclude Include="clawSource\claw\isocket_stream.hpp" />
+    <ClInclude Include="clawSource\claw\iterator.hpp" />
+    <ClInclude Include="clawSource\claw\it_index.hpp" />
+    <ClInclude Include="clawSource\claw\jpeg.hpp" />
+    <ClInclude Include="clawSource\claw\jpeg_error_manager.hpp" />
+    <ClInclude Include="clawSource\claw\kmp.hpp" />
+    <ClInclude Include="clawSource\claw\line_2d.hpp" />
+    <ClInclude Include="clawSource\claw\logger.hpp" />
+    <ClInclude Include="clawSource\claw\log_level.hpp" />
+    <ClInclude Include="clawSource\claw\log_stream.hpp" />
+    <ClInclude Include="clawSource\claw\log_stream_concise.hpp" />
+    <ClInclude Include="clawSource\claw\log_stream_uniq.hpp" />
+    <ClInclude Include="clawSource\claw\lzw_decoder.hpp" />
+    <ClInclude Include="clawSource\claw\lzw_encoder.hpp" />
+    <ClInclude Include="clawSource\claw\math.hpp" />
+    <ClInclude Include="clawSource\claw\max_vector.hpp" />
+    <ClInclude Include="clawSource\claw\meta.hpp" />
+    <ClInclude Include="clawSource\claw\meta\conditional.hpp" />
+    <ClInclude Include="clawSource\claw\meta\is_base_of.hpp" />
+    <ClInclude Include="clawSource\claw\meta\no_type.hpp" />
+    <ClInclude Include="clawSource\claw\meta\same_type.hpp" />
+    <ClInclude Include="clawSource\claw\meta\type_list.hpp" />
+    <ClInclude Include="clawSource\claw\multi_type_map.hpp" />
+    <ClInclude Include="clawSource\claw\multi_type_map_visitor.hpp" />
+    <ClInclude Include="clawSource\claw\non_copyable.hpp" />
+    <ClInclude Include="clawSource\claw\ordered_set.hpp" />
+    <ClInclude Include="clawSource\claw\osocket_stream.hpp" />
+    <ClInclude Include="clawSource\claw\pcx.hpp" />
+    <ClInclude Include="clawSource\claw\pixel.hpp" />
+    <ClInclude Include="clawSource\claw\png.hpp" />
+    <ClInclude Include="clawSource\claw\real_number.hpp" />
+    <ClInclude Include="clawSource\claw\rectangle.hpp" />
+    <ClInclude Include="clawSource\claw\rle_decoder.hpp" />
+    <ClInclude Include="clawSource\claw\rle_encoder.hpp" />
+    <ClInclude Include="clawSource\claw\smart_ptr.hpp" />
+    <ClInclude Include="clawSource\claw\socket_server.hpp" />
+    <ClInclude Include="clawSource\claw\socket_stream.hpp" />
+    <ClInclude Include="clawSource\claw\socket_traits.hpp" />
+    <ClInclude Include="clawSource\claw\socket_traits_unix.hpp" />
+    <ClInclude Include="clawSource\claw\socket_traits_win32.hpp" />
+    <ClInclude Include="clawSource\claw\string_algorithm.hpp" />
+    <ClInclude Include="clawSource\claw\system_info.hpp" />
+    <ClInclude Include="clawSource\claw\system_info_unix.hpp" />
+    <ClInclude Include="clawSource\claw\system_info_win32.hpp" />
+    <ClInclude Include="clawSource\claw\targa.hpp" />
+    <ClInclude Include="clawSource\claw\tree.hpp" />
+    <ClInclude Include="clawSource\claw\trie.hpp" />
+    <ClInclude Include="clawSource\claw\tween\base_tweener.hpp" />
+    <ClInclude Include="clawSource\claw\tween\easing\easing_back.hpp" />
+    <ClInclude Include="clawSource\claw\tween\easing\easing_bounce.hpp" />
+    <ClInclude Include="clawSource\claw\tween\easing\easing_circ.hpp" />
+    <ClInclude Include="clawSource\claw\tween\easing\easing_cubic.hpp" />
+    <ClInclude Include="clawSource\claw\tween\easing\easing_elastic.hpp" />
+    <ClInclude Include="clawSource\claw\tween\easing\easing_expo.hpp" />
+    <ClInclude Include="clawSource\claw\tween\easing\easing_linear.hpp" />
+    <ClInclude Include="clawSource\claw\tween\easing\easing_none.hpp" />
+    <ClInclude Include="clawSource\claw\tween\easing\easing_quad.hpp" />
+    <ClInclude Include="clawSource\claw\tween\easing\easing_quart.hpp" />
+    <ClInclude Include="clawSource\claw\tween\easing\easing_quint.hpp" />
+    <ClInclude Include="clawSource\claw\tween\easing\easing_sine.hpp" />
+    <ClInclude Include="clawSource\claw\tween\easing\symmetric_easing.hpp" />
+    <ClInclude Include="clawSource\claw\tween\single_tweener.hpp" />
+    <ClInclude Include="clawSource\claw\tween\tweener.hpp" />
+    <ClInclude Include="clawSource\claw\tween\tweener_group.hpp" />
+    <ClInclude Include="clawSource\claw\tween\tweener_sequence.hpp" />
+    <ClInclude Include="clawSource\claw\types.hpp" />
+    <ClInclude Include="clawSource\claw\vector_2d.hpp" />
+    <ClInclude Include="clawSource\claw\version.hpp" />
+    <ClInclude Include="clawSource\claw\xbm.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
